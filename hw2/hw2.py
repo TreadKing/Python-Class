@@ -42,7 +42,6 @@ def randomLine(a):
         randomLine(a-1) 
     else:
         print(r2[a])
-
 randomLine(rand)
 
 #5
@@ -55,7 +54,6 @@ for e in r1:
     for i in range(0,len(e)):
         if(e[i].isupper()):
             count+=1
-    #r.extend(re.findall('([A-Z]+)',e))
 print(count)
 
 
