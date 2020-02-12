@@ -32,21 +32,31 @@ print(nums)
 
 #4
 import random
-file = open('bee.txt', 'r')
 rand = random.randint(0,4000)
 print(rand)
-r2 = file.readlines()
-file.close()
-print(r2[rand-1])
+def randomLine(a):
+    file = open('bee.txt', 'r')
+    r2 = file.readlines()
+    file.close()
+    if(r2[a].isspace()):
+        randomLine(a-1) 
+    else:
+        print(r2[a])
+
+randomLine(rand)
 
 #5
 import re
 file = open('bee.txt', 'r')
 r1 = file.readlines()
 r = []
+count = 0
 for e in r1:
-    r.extend(re.findall('([A-Z]+)',e))
-print(len(r))
+    for i in range(0,len(e)):
+        if(e[i].isupper()):
+            count+=1
+    #r.extend(re.findall('([A-Z]+)',e))
+print(count)
 
 
 
