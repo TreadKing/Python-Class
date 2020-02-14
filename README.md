@@ -1,2 +1,2 @@
-#Python Class
+Python Class
 Where I store my assignments

@@ -9,31 +9,33 @@ def triangle(n):
         for j in range(0,i*2+1):
             print('* ', end = '')
         print('\r')
-num = int(input('Enther height of the triangle'))
+num = int(input('Enter height of the triangle: '))
 triangle(num)
 
 #2
 def palindromeChekcer(s):
-    rev = ''.join(reversed(pal))
+    s = s.strip()
+    s = s.replace(' ', '')
+    s = s.lower()
+    rev = ''.join(reversed(s))
     return(s == rev)
 
-pal = input('Enter a string to check for palindrome')
+pal = input('Enter a string to check for palindrome: ')
 output = palindromeChekcer(pal)
 print(output)
 
 #3
-inputNum = input('How many numbers in the list')
+inputNum = input('input a space seperated list of numbers: ')
 nums = inputNum.split()
 for i in range(0,len(nums)):
     nums[i] = int(nums[i])
 nums.sort()
-print(nums[len(nums)-2])
-print(nums)
+print('The second largest number:' + str(nums[len(nums)-2]))
+
 
 #4
 import random
 rand = random.randint(0,4000)
-print(rand)
 def randomLine(a):
     file = open('bee.txt', 'r')
     r2 = file.readlines()
@@ -45,20 +47,11 @@ def randomLine(a):
 randomLine(rand)
 
 #5
-import re
 file = open('bee.txt', 'r')
 r1 = file.readlines()
-r = []
 count = 0
 for e in r1:
     for i in range(0,len(e)):
         if(e[i].isupper()):
             count+=1
-print(count)
-
-
-
-
-
-
-
+print('Number of uppercase characters in txt tile: ' + str(count))
