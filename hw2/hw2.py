@@ -1,5 +1,6 @@
 #hw2
-#1
+#Devang Patel
+# #1
 def triangle(n):
     k = 2*n-2
     for i in range(0,n):
